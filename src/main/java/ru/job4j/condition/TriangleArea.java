@@ -2,8 +2,9 @@ package ru.job4j.condition;
 
 public class TriangleArea {
     public static double area(double a, double b, double c) {
-        double result = Math.sqrt((a + b + c) / 2 * ((a + b + c) / 2 - a) * ((a + b + c) / 2 - b)
-                * ((a + b + c) / 2 - c));
+        double semiperimeterTriangle = (a + b + c) / 2;
+        double result = Math.sqrt(semiperimeterTriangle * (semiperimeterTriangle - a) * (semiperimeterTriangle - b)
+                * (semiperimeterTriangle - c));
         return result;
     }
 
