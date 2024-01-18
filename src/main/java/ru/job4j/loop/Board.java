@@ -5,12 +5,9 @@ public class Board {
 
         for (int line = 0; line < height; line++) {
             for (int column = 0; column < width; column++) {
-                boolean isEvenColumn = column % 2 == 0;
-                boolean isEvenLine = line % 2 == 0;
-                if ((isEvenLine && isEvenColumn) || (!isEvenLine && !isEvenColumn)) {
+                if ((line + column) % 2 == 0) {
                     System.out.print("X");
-                }
-                if ((isEvenLine && !isEvenColumn) || (!isEvenLine && isEvenColumn)) {
+                } else {
                     System.out.print(" ");
                 }
             }
