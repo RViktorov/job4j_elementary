@@ -10,7 +10,6 @@ public class Fitness {
             nik *= 2;
             month++;
         }
-        System.out.println(nik + " " + ivan);
         return month;
     }
 }
