@@ -7,13 +7,13 @@ public class Machine {
         int[] coins = {10, 5, 2, 1};
         int[] result = new int[100];
         int size = 0;
-        int change = money - price;
-        if (change > 0) {
+        money -= price;
+        if (money > 0) {
             for (int coin : coins) {
-                while (change >= coin) {
+                while (money >= coin) {
                     result[size] = coin;
                     size++;
-                    change -= coin;
+                    money -= coin;
                 }
             }
         }
