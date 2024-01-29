@@ -5,7 +5,6 @@ public class DivideBySix {
         String result;
         boolean isEven = number % 2 == 0;
         boolean isDivideThree = number % 3 == 0;
-
         if (isDivideThree && isEven) {
             result = "The number divides by 6.";
         } else if (isDivideThree) {
