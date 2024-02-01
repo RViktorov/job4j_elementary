@@ -26,14 +26,12 @@ public class UnionArray {
             System.arraycopy(secondArray, j, resultArray, index, secondArray.length - j);
         }
         return resultArray;
-
     }
 
     public static void main(String[] args) {
         int[] array1 = {12, 15, 18, 21, 23};
         int[] array2 = {2, 4, 17, 19, 20};
         System.out.println(Arrays.toString(unionTwoArrayInOne(array1, array2)));
-
     }
 
 }
