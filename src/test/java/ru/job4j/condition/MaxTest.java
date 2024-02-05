@@ -42,4 +42,25 @@ class MaxTest {
         int expected = 4;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void whenOneAndFourAndFiveThenMaxFive() {
+        int one = 1;
+        int two = 4;
+        int three = 5;
+        int result = Max.max(one, two, three);
+        int expected = 5;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenOneAndSixAndNineAndTwoThenMaxFive() {
+        int one = 1;
+        int two = 6;
+        int three = 9;
+        int four = 2;
+        int result = Max.max(one, two, three, four);
+        int expected = 9;
+        assertThat(result).isEqualTo(expected);
+    }
 }
