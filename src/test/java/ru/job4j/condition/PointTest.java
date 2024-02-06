@@ -30,7 +30,6 @@ class PointTest {
         double expected = 5.09;
         Point point = new Point(-1, 1);
         Point point1 = new Point(4, 2);
-        int x1 = -1;
         double output = point.distance(point1);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
@@ -41,6 +40,15 @@ class PointTest {
         Point point = new Point(-4, 0);
         Point point1 = new Point(10, 2);
         double output = point.distance(point1);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
+
+    @Test
+    void whenMinus111to421then5Dot09() {
+        double expected = 5.09;
+        Point point = new Point(-1, 1, 1);
+        Point point1 = new Point(4, 2, 1);
+        double output = point.distance3d(point1);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
 
